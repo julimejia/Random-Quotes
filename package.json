@@ -1,20 +1,13 @@
 {
-  "name": "app",
+  "name": "express",
   "version": "1.0.0",
-  "description": "App express",
+  "description": "express",
   "keywords": [
-    "Microservice"
+    "express",
+    "docker"
   ],
-  "homepage": "https://github.com/julimejia/Random-Quotes#readme",
-  "bugs": {
-    "url": "https://github.com/julimejia/Random-Quotes/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/julimejia/Random-Quotes.git"
-  },
   "license": "MIT",
-  "author": "Julian Mejia",
+  "author": "Julian David Mejia Otalvaro",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
@@ -22,6 +15,5 @@
   },
   "dependencies": {
     "express": "^5.1.0"
-  },
-  "devDependencies": {}
+  }
 }

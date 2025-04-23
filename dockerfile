@@ -1,31 +1,23 @@
-FROM node:22.13.1
-
+FROM node:20-alpine
 
 # Create app directory
-
-WORKDIR app/index.js
-
+WORKDIR /
 
 # Install app dependencies
-
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-
-# where available (npm@5+)
-
 COPY package*.json ./
 
-
-RUN npm install
-
-# If you are building your code for production
-
-# RUN npm ci --only=production
-
+# Install dependencies (clean cache to reduce image size)
+RUN npm install && npm cache clean --force
 
 # Bundle app source
-
 COPY . .
 
+# Remove potential security risks
+RUN rm -rf .env.example Dockerfile
+
+# Create a non-root user and switch to it
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
 
 EXPOSE 8080
 
