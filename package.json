@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "App express",
+  "keywords": [
+    "Microservice"
+  ],
+  "homepage": "https://github.com/julimejia/Random-Quotes#readme",
+  "bugs": {
+    "url": "https://github.com/julimejia/Random-Quotes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julimejia/Random-Quotes.git"
+  },
+  "license": "MIT",
+  "author": "Julian Mejia",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}
